@@ -1,6 +1,10 @@
-tensorflow>=2.12
-pillow
-matplotlib
-numpy
-opencv-python
-scikit-learn
+# ---- ML training (local/colab) ----
+tensorflow==2.20.0
+protobuf>=3.20.3,<5
+numpy==1.26.4
+pillow==11.3.0
+opencv-python-headless==4.12.0.88
+scikit-learn==1.3.2
+matplotlib==3.8.2
+pandas==2.1.4
+h5py==3.14.0
