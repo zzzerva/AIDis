@@ -6,13 +6,12 @@ whitenoise==6.7.0
 # ---- ML / Görüntü (CPU, inferans) ----
 numpy==1.26.4
 pillow==11.3.0
-opencv-python-headless==4.12.0.88
+opencv-python-headless==4.8.1.78   # <-- 4.12 yerine 4.8.1.78
 scikit-learn==1.3.2
 joblib==1.5.2
 
 # ---- TensorFlow (CPU) ----
 tensorflow==2.20.0
-# TF 2.20 protobuf<5 ister → çatışmayı önlemek için sabitle
 protobuf>=3.20.3,<5
 
 # ---- (Opsiyonel) PDF/rapor ve Postgres ----
