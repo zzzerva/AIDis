@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: aidis-web
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn aidis_project.wsgi:application"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: aidis_project.settings

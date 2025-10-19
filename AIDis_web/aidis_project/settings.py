@@ -17,10 +17,17 @@ SECRET_KEY = os.getenv(
 )
 
 # SECURITY WARNING: don't run with debug turned on in production!
+<<<<<<< HEAD
 DEBUG = os.getenv("DJANGO_DEBUG", "True").lower() in {"1", "true", "yes"}
 
 # Virgülle ayrılmış ALLOWED_HOSTS; boşsa [] kalır
 ALLOWED_HOSTS = [h for h in os.getenv("DJANGO_ALLOWED_HOSTS", "").split(",") if h] or []
+=======
+DEBUG = os.getenv("DJANGO_DEBUG", "False").lower() in {"1", "true", "yes"}
+
+# Virgülle ayrılmış ALLOWED_HOSTS; boşsa [] kalır
+ALLOWED_HOSTS = [h for h in os.getenv("DJANGO_ALLOWED_HOSTS", "").split(",") if h] or ['*']
+>>>>>>> 4f8f6e8 (Initiall commit)
 
 # Application definition
 INSTALLED_APPS = [
@@ -91,7 +98,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 STATIC_URL = "/static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]  # geliştirici statikleri
+<<<<<<< HEAD
 STATIC_ROOT = BASE_DIR / "staticfiles"    # collectstatic için (deploy’da işe yarar)
+=======
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')    # collectstatic için (deploy’da işe yarar)
+>>>>>>> 4f8f6e8 (Initiall commit)
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
