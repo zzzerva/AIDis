@@ -2,8 +2,17 @@ services:
   - type: web
     name: aidis-web
     env: python
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn aidis_project.wsgi:application"
+    plan: standard     # TF için 2 GB RAM önerilir
+    rootDir: AIDis_web
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py collectstatic --noinput
+      python manage.py migrate --noinput
+    startCommand: gunicorn aidis_project.wsgi:application
     envVars:
-      - key: DJANGO_SETTINGS_MODULE
-        value: aidis_project.settings
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
+      - key: DJANGO_ALLOWED_HOSTS
+        value: ".onrender.com"
