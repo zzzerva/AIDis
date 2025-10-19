@@ -19,15 +19,13 @@ DEFAULT_CONFIG = {
     "THRESHOLD": 0.25,
     
     # Dosya yolları
-ARTIFACTS_DIR = ROOT / "models"
-
-PATHS = {
-    "MODEL_PATH":     ARTIFACTS_DIR / "final_model.keras",
-    "CLASS_IDX_PATH": ARTIFACTS_DIR / "class_indices.json",
-    "TEST_DIR":       ARTIFACTS_DIR / "test_images",
-    "CROPS_DIR":      ARTIFACTS_DIR / "letter_crops",
-    "ANNOT_DIR":      ARTIFACTS_DIR / "letter_crops_annotated",
-}
+    "ARTIFACTS_DIR": ROOT / "models",
+    "MODEL_PATH": ROOT / "models" / "final_model.keras",
+    "CLASS_IDX_PATH": ROOT / "models" / "class_indices.json",
+    "TEST_DIR": ROOT / "test_images",
+    "WORD_DIR": ROOT / "test_images",  # Kelime görselleri için dizin
+    "CROPS_DIR": ROOT / "letter_crops",
+    "ANNOT_DIR": ROOT / "letter_crops_annotated",
     
     # Çıktı dosyaları
     "CROPS_PRED_CSV": ROOT / "predictions_letter_crops.csv",
