@@ -1,9 +1,9 @@
-# ---- Core (Django + prod server + static) ----
+# ---- Web (Django + prod) ----
 Django==5.2.6
 gunicorn==23.0.0
 whitenoise==6.7.0
 
-# ---- ML / Görüntü (CPU) ----
+# ---- ML / Görüntü (CPU, inferans) ----
 numpy==1.26.4
 pillow==11.3.0
 opencv-python-headless==4.12.0.88
@@ -12,13 +12,10 @@ joblib==1.5.2
 
 # ---- TensorFlow (CPU) ----
 tensorflow==2.20.0
-tensorboard==2.20.0
-tensorboard-data-server==0.7.2
-protobuf==6.32.1
+# TF 2.20 protobuf<5 ister → çatışmayı önlemek için sabitle
+protobuf>=3.20.3,<5
 
-# ---- İhtiyaç duyuyorsan (PDF vs.) ----
+# ---- (Opsiyonel) PDF/rapor ve Postgres ----
 reportlab==4.4.4
-
-# ---- (Opsiyonel) Postgres kullanacaksan ----
 dj-database-url==2.3.0
 psycopg[binary]==3.2.1
