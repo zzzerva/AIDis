@@ -1,0 +1,12 @@
+file,true_label,pred_label,P(normal),correct
+dyslexic/Ekran görüntüsü 2025-10-02 163735.png,dyslexic,normal,0.9814100861549377,0
+dyslexic/Ekran görüntüsü 2025-10-02 163744.png,dyslexic,normal,0.9858471155166626,0
+dyslexic/Ekran görüntüsü 2025-10-02 163757.png,dyslexic,normal,0.9969543218612671,0
+dyslexic/Ekran görüntüsü 2025-10-02 163813.png,dyslexic,normal,0.9937983751296997,0
+normal/Ekran görüntüsü 2025-10-02 163739.png,normal,normal,0.9854668378829956,1
+normal/Ekran görüntüsü 2025-10-02 163747.png,normal,normal,0.9977104067802429,1
+normal/Ekran görüntüsü 2025-10-02 163750.png,normal,normal,0.9925540089607239,1
+normal/Ekran görüntüsü 2025-10-02 163753.png,normal,normal,0.8641000390052795,1
+normal/Ekran görüntüsü 2025-10-02 163803.png,normal,normal,0.9543312788009644,1
+normal/Ekran görüntüsü 2025-10-02 163807.png,normal,dyslexic,0.004172797314822674,0
+normal/Ekran görüntüsü 2025-10-02 163810.png,normal,normal,0.8205445408821106,1

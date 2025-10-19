@@ -7,7 +7,9 @@ import cv2
 import numpy as np
 from pathlib import Path
 from typing import Optional, Tuple, List
-from .config import get_config
+import sys
+sys.path.append(str(Path(__file__).parent.parent))
+from config import get_config
 
 def ensure_dir(path: str) -> None:
     """Dizini oluştur (yoksa)"""
