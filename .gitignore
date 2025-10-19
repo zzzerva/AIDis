@@ -131,7 +131,6 @@ dmypy.json
 # AIDis specific
 # Model dosyaları (çok büyük - GitHub'a yüklenmemeli)
 *.h5
-*.keras
 *.joblib
 *.pkl
 *.pickle
