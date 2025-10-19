@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}AIDis - Sonuç{% endblock %}
+{% block content %}
+
+<section>
+  <div class="kpis">
+    <div class="kpi">
+      <div class="v">{{ upload.dyslexic_count|add:upload.normal_count }}</div>
+      <div class="k">Toplam Harf</div>
+    </div>
+    <div class="kpi">
+      <div class="v">{{ upload.normal_count }}</div>
+      <div class="k">Normal</div>
+    </div>
+    <div class="kpi">
+      <div class="v">{{ upload.dyslexic_count }}</div>
+      <div class="k">Disleksi</div>
+    </div>
+    <div class="kpi">
+      <div class="v">%{{ upload.dyslexic_percent }}</div>
+      <div class="k">Disleksi Belirti Oranı</div>
+    </div>
+  </div>
+
+  {% if upload.dyslexic_percent > 50 %}
+    <div class="alert alert-warn">⚠ Özel eğitim uzmanı veya psikiyatriye yönlendirilmelisiniz.</div>
+  {% else %}
+    <div class="alert alert-ok">✔ Normal sınırlar içinde.</div>
+  {% endif %}
+
+  <div style="margin-top:12px">
+    {% if upload.annotated_image %}
+      <img class="result-img" src="{{ upload.annotated_image.url }}" alt="Annot Görsel">
+    {% endif %}
+  </div>
+
+  <div class="actions" style="margin-top:14px">
+    <a class="btn btn-primary" href="{% url 'download_pdf' upload.pk %}">📄 PDF Raporu İndir</a>
+    <a class="btn" style="background:#eef2ff;color:#3730a3" href="{% url 'upload' %}">↩ Yeni Görsel Yükle</a>
+  </div>
+</section>
+
+{% endblock %}

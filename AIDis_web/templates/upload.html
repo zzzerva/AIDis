@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load form_extras %}
+{% block title %}AIDis - Görsel Yükle{% endblock %}
+{% block content %}
+
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+
+  <div class="form-grid">
+    <div class="form-group">
+      <label for="{{ form.first_name.id_for_label }}">Ad</label>
+      {{ form.first_name|add_class:"input" }}
+    </div>
+
+    <div class="form-group">
+      <label for="{{ form.last_name.id_for_label }}">Soyad</label>
+      {{ form.last_name|add_class:"input" }}
+    </div>
+
+    <div class="form-group">
+      <label for="{{ form.age.id_for_label }}">Yaş</label>
+      {{ form.age|add_class:"input" }}
+    </div>
+
+    <div class="form-group full">
+      <label for="{{ form.image.id_for_label }}">El Yazısı Görseli</label>
+      {{ form.image|add_class:"file" }}
+      <div class="hint">PNG/JPG yükleyin. En iyi sonuç için net ve kontrastı iyi bir görüntü kullanın.</div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button class="btn btn-primary" type="submit">Analiz Et</button>
+  </div>
+</form>
+
+{% endblock %}

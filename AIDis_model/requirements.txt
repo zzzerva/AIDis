@@ -1,0 +1,6 @@
+tensorflow>=2.12
+pillow
+matplotlib
+numpy
+opencv-python
+scikit-learn

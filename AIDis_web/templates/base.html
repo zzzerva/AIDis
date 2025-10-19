@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{% block title %}AIDis{% endblock %}</title>
+
+  <!-- ✅ Favicon (tarayıcı sekmesi ikonu) -->
+  <link rel="icon" type="image/png" href="{% static 'images/aidis2_icon.png' %}">
+  <link rel="apple-touch-icon" href="{% static 'images/aidis2_icon.png' %}">
+  <meta name="theme-color" content="#e3f2fd">
+
+  <!-- ✅ CSS -->
+  <link rel="stylesheet" href="{% static 'css/aidis.css' %}">
+
+  <!-- (Opsiyonel) Basit favicon yedeği için -->
+  <link rel="shortcut icon" href="{% static 'images/aidis2_icon.png' %}" type="image/x-icon">
+
+</head>
+<body>
+  <main class="aidis-card">
+    <header class="aidis-header">
+      <div class="logo-badge">AI</div>
+      <div>
+        <h1 class="title">AIDis</h1>
+        <p class="subtitle">Yapay Zekâ Destekli Disleksi Tespiti</p>
+      </div>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+  </main>
+</body>
+</html>
